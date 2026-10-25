@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:background="@color/background"
+    android:paddingHorizontal="20dp">
+    <TextView android:id="@+id/nav_products"
+        style="@style/NavButton" android:text="@string/products_tab" />
+    <TextView android:id="@+id/nav_movements"
+        style="@style/NavButton" android:text="@string/movements_tab" />
+    <TextView android:id="@+id/nav_summary"
+        style="@style/NavButton" android:text="@string/summary_tab" />
+</LinearLayout>

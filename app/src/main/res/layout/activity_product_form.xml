@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/background">
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/back_button"
+                style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/back" />
+            <TextView android:id="@+id/form_title" style="@style/ScreenTitle" android:text="@string/new_product" />
+            <TextView style="@style/BodyText" android:text="@string/form_subtitle" android:layout_marginTop="4dp" />
+            <TextView style="@style/FieldLabel" android:text="@string/name_label" android:labelFor="@id/input_name" />
+            <EditText android:id="@+id/input_name" style="@style/InputField" android:hint="@string/name_hint"
+                android:inputType="textCapSentences" android:maxLength="100" android:imeOptions="actionNext" />
+            <TextView style="@style/FieldLabel" android:text="@string/barcode_label" android:labelFor="@id/input_barcode" />
+            <EditText android:id="@+id/input_barcode" style="@style/InputField" android:hint="@string/barcode_hint"
+                android:inputType="textNoSuggestions" android:maxLength="64" android:imeOptions="actionNext" />
+            <TextView style="@style/BodyText" android:text="@string/barcode_help" android:textSize="12sp" android:layout_marginTop="6dp" />
+            <TextView style="@style/FieldLabel" android:text="@string/price_label" android:labelFor="@id/input_price" />
+            <EditText android:id="@+id/input_price" style="@style/InputField" android:hint="@string/price_hint"
+                android:inputType="numberDecimal" android:maxLength="12" android:imeOptions="actionNext" />
+            <TextView style="@style/FieldLabel" android:text="@string/stock_label" android:labelFor="@id/input_stock" />
+            <EditText android:id="@+id/input_stock" style="@style/InputField" android:text="0"
+                android:inputType="number" android:maxLength="7" android:imeOptions="actionNext" />
+            <TextView android:id="@+id/stock_help" style="@style/BodyText" android:text="@string/stock_help"
+                android:textSize="12sp" android:layout_marginTop="6dp" />
+            <TextView style="@style/FieldLabel" android:text="@string/minimum_label" android:labelFor="@id/input_min_stock" />
+            <EditText android:id="@+id/input_min_stock" style="@style/InputField" android:text="5"
+                android:inputType="number" android:maxLength="7" android:imeOptions="actionDone" />
+            <TextView style="@style/BodyText" android:text="@string/minimum_help" android:textSize="12sp" android:layout_marginTop="6dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/save_product" style="@style/PrimaryButton"
+                android:text="@string/save_product" android:layout_marginTop="24dp" />
+            <TextView style="@style/BodyText" android:text="@string/local_data_note" android:gravity="center"
+                android:textSize="12sp" android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

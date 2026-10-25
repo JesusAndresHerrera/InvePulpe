@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical" android:paddingHorizontal="20dp">
+        <TextView style="@style/BrandTitle" android:text="@string/app_name" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/add_product"
+            style="@style/PrimaryButton" android:layout_width="wrap_content" android:minHeight="48dp"
+            android:text="@string/add_product" android:textSize="13sp" />
+    </LinearLayout>
+    <include layout="@layout/include_navigation" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingTop="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView style="@style/ScreenTitle" android:layout_width="0dp" android:layout_weight="1"
+                android:text="@string/products_title" />
+            <TextView android:id="@+id/product_count" style="@style/BodyText"
+                android:layout_width="wrap_content" android:textSize="12sp" />
+        </LinearLayout>
+        <EditText android:id="@+id/search_products" style="@style/InputField"
+            android:layout_marginTop="10dp" android:hint="@string/search_products"
+            android:drawableStart="@drawable/ic_search" android:drawablePadding="10dp"
+            android:background="@android:color/transparent" android:paddingStart="0dp"
+            android:textSize="14sp" android:inputType="text" android:imeOptions="actionDone" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="12dp">
+            <TextView android:id="@+id/filter_all" style="@style/FilterButton" android:text="@string/filter_all" />
+            <TextView android:id="@+id/filter_low_stock" style="@style/FilterButton"
+                android:layout_marginStart="8dp" android:text="@string/filter_low_stock" />
+        </LinearLayout>
+        <TextView android:id="@+id/stock_banner" style="@style/BodyText" android:textSize="12sp"
+            android:layout_marginTop="8dp" android:textColor="@color/warning_text"
+            android:visibility="gone" android:accessibilityLiveRegion="polite" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginTop="8dp">
+            <TextView style="@style/ColumnHeading" android:layout_width="0dp" android:layout_weight="1"
+                android:text="@string/column_product" />
+            <TextView style="@style/ColumnHeading" android:layout_width="60dp" android:gravity="end"
+                android:text="@string/column_stock" />
+            <TextView style="@style/ColumnHeading" android:layout_width="94dp" android:gravity="end"
+                android:text="@string/column_price" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+    </LinearLayout>
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView android:id="@+id/product_list" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:paddingHorizontal="20dp" android:clipToPadding="false" android:divider="@color/outline"
+            android:dividerHeight="1dp" android:scrollbarStyle="outsideOverlay" />
+        <TextView android:id="@+id/empty_products" style="@style/BodyText"
+            android:layout_height="match_parent" android:gravity="center" android:padding="28dp"
+            android:text="@string/no_products" android:visibility="gone" />
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="12dp">
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="@color/text_primary" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:paddingVertical="12dp">
+            <TextView style="@style/BodyText" android:layout_width="0dp" android:layout_weight="1"
+                android:text="@string/inventory_value_label" android:textSize="12sp" />
+            <TextView android:id="@+id/inventory_total" style="@style/BodyText" android:layout_width="wrap_content"
+                android:text="@string/zero_money" android:fontFamily="monospace" android:textSize="18sp"
+                android:textColor="@color/text_primary" />
+        </LinearLayout>
+        <TextView style="@style/BodyText" android:text="@string/tap_product_help" android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

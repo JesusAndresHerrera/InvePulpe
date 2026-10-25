@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/include_app_header" />
+    <include layout="@layout/include_navigation" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+            <TextView style="@style/ScreenTitle" android:text="@string/movements_title" />
+            <TextView style="@style/FieldLabel" android:text="@string/product_label" android:labelFor="@id/select_product" />
+            <Spinner android:id="@+id/select_product" android:layout_width="match_parent" android:layout_height="52dp"
+                android:background="@drawable/bg_input" android:paddingHorizontal="10dp" android:spinnerMode="dropdown"
+                android:contentDescription="@string/product_label" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="12dp">
+                    <TextView style="@style/FieldLabel" android:text="@string/type_label" android:labelFor="@id/select_type" />
+                    <Spinner android:id="@+id/select_type" android:layout_width="match_parent" android:layout_height="52dp"
+                        android:background="@drawable/bg_input" android:paddingHorizontal="8dp" android:spinnerMode="dropdown"
+                        android:contentDescription="@string/type_label" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/FieldLabel" android:text="@string/quantity_label" android:labelFor="@id/input_quantity" />
+                    <EditText android:id="@+id/input_quantity" style="@style/InputField"
+                        android:inputType="number" android:maxLength="7" android:imeOptions="actionDone" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:id="@+id/movement_help" style="@style/BodyText" android:text="@string/movement_help"
+                android:textSize="12sp" android:layout_marginTop="10dp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/register_movement"
+                style="@style/PrimaryButton" android:text="@string/register_movement" android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:orientation="vertical" android:paddingHorizontal="20dp">
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+        <TextView style="@style/SectionTitle" android:text="@string/history_title" android:layout_marginTop="16dp" />
+        <TextView style="@style/BodyText" android:text="@string/history_help" android:textSize="11sp"
+            android:layout_marginTop="4dp" android:layout_marginBottom="8dp" />
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ListView android:id="@+id/movement_list" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:divider="@color/outline" android:dividerHeight="1dp" />
+            <TextView android:id="@+id/empty_movements" style="@style/BodyText" android:layout_height="match_parent"
+                android:gravity="center" android:padding="16dp" android:text="@string/no_movements" android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

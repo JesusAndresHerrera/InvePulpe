@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+    android:gravity="center_vertical" android:minHeight="72dp" android:paddingVertical="14dp"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical" android:paddingEnd="10dp">
+        <TextView android:id="@+id/movement_product" style="@style/BodyText" android:textSize="14sp"
+            android:textColor="@color/text_primary" android:fontFamily="sans-serif-medium" />
+        <TextView android:id="@+id/movement_date" style="@style/BodyText" android:textSize="11sp" android:layout_marginTop="5dp" />
+    </LinearLayout>
+    <TextView android:id="@+id/movement_quantity" style="@style/BodyText" android:layout_width="110dp"
+        android:gravity="end" android:textSize="12sp" android:fontFamily="sans-serif-medium" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <color name="primary">#C1D2AE</color>
+    <color name="on_primary">#24331A</color>
+    <color name="background">#20221E</color>
+    <color name="surface">#20221E</color>
+    <color name="text_primary">#EEF0E7</color>
+    <color name="text_secondary">#B9C0B2</color>
+    <color name="outline">#3F4638</color>
+    <color name="warning_surface">#3C2924</color>
+    <color name="warning_text">#FFB799</color>
+    <color name="selected_surface">#30372A</color>
+    <color name="danger">#FFB4AB</color>
+</resources>

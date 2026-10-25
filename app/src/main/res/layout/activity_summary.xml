@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/include_app_header" />
+    <include layout="@layout/include_navigation" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline" />
+    <ProgressBar android:id="@+id/progress" style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+            <TextView style="@style/ScreenTitle" android:text="@string/summary_title" />
+            <TextView style="@style/BodyText" android:text="@string/total_value_label" android:textSize="12sp"
+                android:layout_marginTop="24dp" />
+            <TextView android:id="@+id/total_value" style="@style/BodyText" android:text="@string/zero_money"
+                android:textColor="@color/text_primary" android:textSize="32sp" android:fontFamily="monospace"
+                android:layout_marginTop="6dp" />
+            <TextView android:id="@+id/summary_counts" style="@style/BodyText" android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/outline"
+                android:layout_marginTop="24dp" />
+            <TextView style="@style/SectionTitle" android:text="@string/top_title" android:layout_marginTop="24dp" />
+            <TextView style="@style/BodyText" android:text="@string/top_help" android:textSize="12sp"
+                android:layout_marginTop="4dp" android:layout_marginBottom="8dp" />
+            <LinearLayout android:id="@+id/top_products" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" />
+            <TextView android:id="@+id/empty_top" style="@style/BodyText" android:text="@string/empty_top" android:paddingVertical="16dp" />
+            <TextView style="@style/SectionTitle" android:text="@string/low_stock_section" android:layout_marginTop="24dp" />
+            <TextView android:id="@+id/low_stock_list" style="@style/BodyText" android:background="@drawable/bg_warning"
+                android:textColor="@color/warning_text" android:padding="14dp" android:layout_marginTop="12dp" />
+            <TextView style="@style/BodyText" android:text="@string/local_data_note"
+                android:textSize="11sp" android:layout_marginTop="24dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

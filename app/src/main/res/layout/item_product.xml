@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"
+    android:gravity="center_vertical" android:minHeight="76dp" android:paddingVertical="14dp"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical" android:paddingEnd="8dp">
+        <TextView android:id="@+id/product_name" style="@style/BodyText" android:textSize="14sp"
+            android:textColor="@color/text_primary" android:fontFamily="sans-serif-medium" />
+        <TextView android:id="@+id/product_barcode" style="@style/BodyText" android:layout_marginTop="5dp"
+            android:textSize="11sp" android:fontFamily="monospace" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="60dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/product_stock" style="@style/BodyText" android:gravity="end"
+            android:textColor="@color/text_primary" android:fontFamily="monospace" android:textSize="14sp"
+            android:maxLines="1" android:autoSizeTextType="uniform" android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="18sp" android:autoSizeStepGranularity="1sp" />
+        <TextView android:id="@+id/product_warning" style="@style/BodyText" android:gravity="end"
+            android:text="@string/units_short" android:textSize="11sp" />
+    </LinearLayout>
+    <TextView android:id="@+id/product_price" style="@style/BodyText" android:layout_width="94dp"
+        android:gravity="end" android:textColor="@color/text_primary" android:textSize="12sp"
+        android:maxLines="1" android:autoSizeTextType="uniform" android:autoSizeMinTextSize="10sp"
+        android:autoSizeMaxTextSize="14sp" android:autoSizeStepGranularity="1sp" />
+</LinearLayout>

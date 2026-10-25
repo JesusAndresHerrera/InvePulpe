@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#303D2B</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="background">#FBFBF8</color>
+    <color name="surface">#FBFBF8</color>
+    <color name="text_primary">#272E26</color>
+    <color name="text_secondary">#626B5E</color>
+    <color name="outline">#DFE3D8</color>
+    <color name="warning_surface">#FAEEE7</color>
+    <color name="warning_text">#963F25</color>
+    <color name="selected_surface">#EEF0E8</color>
+    <color name="danger">#B3261E</color>
+</resources>

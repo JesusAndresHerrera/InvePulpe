@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+    <TextView style="@style/BodyText" android:text="@string/edit_movement_help" />
+    <TextView style="@style/FieldLabel" android:text="@string/type_label" android:labelFor="@id/edit_type" />
+    <Spinner android:id="@+id/edit_type" android:layout_width="match_parent" android:layout_height="52dp"
+        android:background="@drawable/bg_input" android:paddingHorizontal="8dp" android:contentDescription="@string/type_label" />
+    <TextView style="@style/FieldLabel" android:text="@string/quantity_label" android:labelFor="@id/edit_quantity" />
+    <EditText android:id="@+id/edit_quantity" style="@style/InputField"
+        android:inputType="number" android:maxLength="7" android:imeOptions="actionDone" />
+</LinearLayout>
